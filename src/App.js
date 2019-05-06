@@ -1,27 +1,30 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import AddTasks from './ToDo Task/AddTask';
+import AllTasks from './ToDo Task/AllTasks';
+import CompletedTask from './ToDo Task/Completed_Task';
+import DeletedTask from './ToDo Task/Deleted_Task';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      <>
+      ALL TASKS:
+        <AddTasks />
+        <div className="alltasks">
+          <AllTasks />
+        </div>
+COMPLETED:
+        <div className="completed">
+
+          <CompletedTask />
+        </div>
+DELETED:
+        <div className="deleted">
+          <DeletedTask />
+        </div>
+      </>
+    )
   }
 }
 
